@@ -1,0 +1,30 @@
+﻿<Window x:Class="Felvételi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Felvételi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dg_diakok"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="btn_hozzaad" Margin="20" Content="Új Diák" FontSize="30" Click="btn_hozzaad_Click"/>
+            <Button x:Name="btn_torol" Grid.Row="1" Margin="20" Content="Törlés" FontSize="30" Click="btn_torol_Click"/>
+            <Button x:Name="btn_import" Grid.Row="2" Margin="20" Content="Import" FontSize="30" Click="btn_import_Click"/>
+            <Button x:Name="btn_export" Grid.Row="3" Margin="20" Content="Export" FontSize="30" Click="btn_export_Click"/>
+        </Grid>
+    </Grid>
+</Window>
